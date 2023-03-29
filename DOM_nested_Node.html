@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Nested Node</title>
+</head>
+<body>
+    <div class="parent">
+        <h1 class="heading">javascript is awesome</h1>
+        <h3>2nd heading </h3>
+        <h5>Third heading</h5>
+        <h4>last heading</h4>
+    </div>
+    <script>
+        const heading = document.querySelector('.heading');
+        const parent1 = heading.parentNode;
+        console.log(parent1);
+
+        const parent = document.querySelector('.parent');
+        const child = parent.childNodes;
+        console.log(child);
+
+        const head1 = document.querySelector('h5');
+        console.log(head1.nextElementSibling);
+
+        const head3 = document.querySelector('h4');
+        console.log(head3.previousElementSibling);
+    </script>
+</body>
+</html>
