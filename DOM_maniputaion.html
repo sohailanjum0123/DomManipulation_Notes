@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model manipulation</title>
+</head>
+<body>
+    <div class="h1">This is main heading</div>
+    <div id="parent">
+        <h3>this is first heading</h3>
+        <h4>this is middle heading</h4>
+        <h5>this last heading</h5>
+    </div>
+    <script>
+        let parentheading = document.querySelector('#parent');
+        parentheading.innerHTML = 'This is awesome';
+        parentheading.style.color = 'red';
+        parentheading.style.fontSize = '100px';
+        parentheading.classList.add('heading');
+        parentheading.classList.remove('heading');
+
+        const newcreatetag = document.createElement('h1');
+        newcreatetag.innerHTML = 'this is parent heading';
+        console.log(newcreatetag);
+
+        const placeheading = document.querySelector('#parent');
+        placeheading.appendChild(newcreatetag);
+        newcreatetag.classList.add('parentheading')
+
+    </script>
+</body>
+</html>
